@@ -1,0 +1,192 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.entries-container {
+  border: 1px solid grey;
+  width: 70%;
+  margin: 20px auto;
+  border-radius: 10px;
+  background-color: rgb(173, 183, 183);
+  display: flex;
+  flex-direction: column;
+}
+
+.header,
+.entry {
+  display: flex;
+  width: 60%;
+  margin: 10px auto;
+  height: 40px;
+  padding: 10px 0; 
+  border-bottom: 1px solid black;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.4s;
+}
+
+.entry:hover {
+  background-color: black;
+}
+
+.entry:hover span {
+  color: white;
+}
+
+.selected-entry {
+  background-color: rgb(195, 212, 195);
+}
+
+.header .sn,
+.entry .sn {
+  flex-basis: 4%;
+}
+
+.header .transaction,
+.header .date,
+.entry .transaction,
+.entry .date {
+  flex-basis: 20%;
+  text-align: left;
+}
+
+.header .amount,
+.entry .amount {
+  flex-basis: 15%;
+}
+
+.header .actions,
+.entry .actions {
+  flex-basis: 20%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.entries-summary {
+  margin: 20px 0;
+  padding: 20px 40px;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.entries-summary div {
+  margin: 5px 0;
+}
+
+.btn {
+  background-color: #557dec;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #557dec;
+  color: white;
+  padding: 10px 5px;
+  transition: all 0.4s;
+  margin: 5px;
+  width: 100px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.btn.add {
+  background-color: #62f062;
+  border: 1px solid #62f062;
+}
+
+.btn:hover {
+  box-shadow: 1px 1px 4px 2px #a3a0a080;
+   transform: scale(1.01); 
+  transform: translateX(1px);
+}
+
+.controls {
+  position: fixed;
+  bottom:0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+   margin: 20px auto ; 
+  border-top: 1px dashed red;
+  border-bottom: 1px dashed red;
+  padding: 10px 0;
+  background-color: #e7e2e2;
+}
+
+.controls label {
+  font-size: 16px;
+   font-weight: bold; 
+   text-align: left; 
+}
+
+.controls label.type {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 10%;
+  background: linear-gradient(45deg, #0c415c, #92e2da);
+  color: white;
+  width: 100px;
+  cursor: pointer;
+}
+
+.controls div input {
+  height: 24px;
+  font-size: 16px;
+  line-height: 20px;
+  border: 2px solid #223b55;
+  border-radius: 5px;
+  outline: none;
+  padding: 5px 10px;
+}
+
+.controls div.amount input {
+  width: 150px;
+}
+
+.controls div input:focus {
+  border: 2px solid #2b8df5;
+  outline: none;
+}
+
+.controls div {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
